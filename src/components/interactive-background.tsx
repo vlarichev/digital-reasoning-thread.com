@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-// @ts-ignore
+// @ts-expect-error - no types available for vanta
 import VANTA from 'vanta/dist/vanta.net.min'
 import type { VantaEffect } from '../types/vanta'
 
