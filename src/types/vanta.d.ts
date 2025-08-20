@@ -1,9 +1,11 @@
-declare module 'vanta/dist/vanta.net.min' {
-  import { Object3D } from 'three';
+export interface VantaEffect {
+  destroy: () => void;
+}
 
+declare module 'vanta/dist/vanta.net.min' {
   interface VantaNetOptions {
     el: HTMLElement;
-    THREE: any;
+    THREE: typeof import('three');
     mouseControls?: boolean;
     touchControls?: boolean;
     gyroControls?: boolean;
@@ -17,10 +19,6 @@ declare module 'vanta/dist/vanta.net.min' {
     showDots?: boolean;
     backgroundColor?: number;
     color?: number;
-  }
-
-  interface VantaEffect {
-    destroy: () => void;
   }
 
   function VANTA(options: VantaNetOptions): VantaEffect;

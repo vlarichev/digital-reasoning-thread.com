@@ -3,9 +3,10 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import VANTA from 'vanta/dist/vanta.net.min'
+import type { VantaEffect } from '../types/vanta'
 
 export function InteractiveBackground() {
-  const vantaRef = useRef<any>(null)
+  const vantaRef = useRef<VantaEffect | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
