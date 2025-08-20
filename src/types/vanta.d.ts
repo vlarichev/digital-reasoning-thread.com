@@ -21,6 +21,6 @@ declare module 'vanta/dist/vanta.net.min' {
     color?: number;
   }
 
-  function VANTA(options: VantaNetOptions): VantaEffect;
+  const VANTA: (options: VantaNetOptions) => VantaEffect;
   export default VANTA;
 }

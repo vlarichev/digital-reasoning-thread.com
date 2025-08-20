@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
+// @ts-ignore
 import VANTA from 'vanta/dist/vanta.net.min'
 import type { VantaEffect } from '../types/vanta'
 
