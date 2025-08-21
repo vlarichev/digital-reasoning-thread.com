@@ -8,12 +8,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://digital-reasoning-thread.com'),
-  title: "Digital Reasoning Thread",
-  description: "Explore the architecture of modern systems",
+  title: "Digital Reasoning Thread - Modern System Architecture Platform",
+  description: "Explore the architecture of modern systems through our comprehensive platform. Learn about system design, scalability, and best practices for building robust applications.",
   manifest: '/site.webmanifest',
   openGraph: {
-    title: 'Digital Reasoning Thread',
-    description: 'Explore the architecture of modern systems',
+    title: 'Digital Reasoning Thread - Modern System Architecture Platform',
+    description: 'Discover modern system architecture principles and practices. Our platform provides in-depth insights into building scalable, resilient, and efficient software systems.',
     url: 'https://digital-reasoning-thread.com',
     siteName: 'Digital Reasoning Thread',
     images: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'Digital Reasoning Thread',
+        alt: 'Digital Reasoning Thread - Modern System Architecture Platform',
       },
     ],
     locale: 'en_US',
@@ -29,9 +29,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digital Reasoning Thread',
-    description: 'Explore the architecture of modern systems',
+    title: 'Digital Reasoning Thread - Modern System Architecture Platform',
+    description: 'Discover modern system architecture principles and practices. Our platform provides in-depth insights into building scalable, resilient, and efficient software systems.',
     images: ['/og.png'],
+  },
+  other: {
+    'image': '/og.png',
+    'og:image': '/og.png',
+    'og:image:secure_url': 'https://digital-reasoning-thread.com/og.png',
+    'og:image:width': '1200',
+    'og:image:height': '630',
+    'og:image:alt': 'Digital Reasoning Thread - Modern System Architecture Platform',
   },
   icons: {
     icon: [
