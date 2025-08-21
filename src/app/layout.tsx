@@ -7,6 +7,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://digital-reasoning-thread.com'),
   title: "Digital Reasoning Thread",
   description: "Explore the architecture of modern systems",
   manifest: '/site.webmanifest',
