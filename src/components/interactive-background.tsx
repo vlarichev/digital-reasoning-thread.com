@@ -22,9 +22,14 @@ export function InteractiveBackground() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0xa100ff,
+        color: 0xc9d616,
         backgroundColor: 0x1a1b1e,
-        showDots: false
+        showDots: true,
+        points: 12,
+        maxDistance: 25,
+        spacing: 18,
+        vertexColors: false,
+        lineWidth: 2
       })
     }
 
