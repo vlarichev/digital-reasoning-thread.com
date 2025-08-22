@@ -22,6 +22,30 @@
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-text {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.gradient-text:hover {
+  background: linear-gradient(90deg, 
+    #7033ff 0%, 
+    #a100ff 50%,
+    #7033ff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 2s linear infinite;
+}
+
 :root {
   --background: #fdfdfd;
   --foreground: #000000;

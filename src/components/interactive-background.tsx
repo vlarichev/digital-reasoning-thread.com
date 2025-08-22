@@ -23,7 +23,8 @@ export function InteractiveBackground() {
         scale: 1.00,
         scaleMobile: 1.00,
         color: 0xa100ff,
-        backgroundColor: 0x1a1b1e
+        backgroundColor: 0x1a1b1e,
+        showDots: false
       })
     }
 

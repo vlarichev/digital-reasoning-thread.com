@@ -8,20 +8,19 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
+import { link } from 'fs'
 
 const navItems = [
-  { name: "Overview", href: "#overview" },
-  { name: "Architecture", href: "#architecture" },
-  { name: "Documentation", href: "#docs" },
-  { name: "Research", href: "#research" },
-  { name: "Community", href: "#community" },
+  { name: "Overview", href: 'https://vlarichev.github.io/digital-reasoning-thread/' },
+  { name: "Whitepaper", href: "https://vlarichev.github.io/digital-reasoning-thread/whitepaper.html" },
+  { name: "Contribute", href: "https://github.com/vlarichev/digital-reasoning-thread" },
 ]
 
 export function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 border-b bg-background/80 backdrop-blur-sm">
       <div className="container flex h-20 items-center justify-between px-6 md:px-8">
-        <Link href="/" className="font-bold text-xl tracking-tight hover:text-primary transition-colors">
+        <Link href="/" className="font-bold text-xl tracking-tight gradient-text hover:text-primary transition-colors">
           DRT
         </Link>
 
@@ -41,11 +40,17 @@ export function Navbar() {
         </NavigationMenu>
 
         <div className="flex items-center gap-3">
-          <Button variant="default" size="sm" className="hidden sm:inline-flex">
-            Read the paper
-          </Button>
+          <a 
+            href="https://github.com/vlarichev/digital-reasoning-thread/blob/ed954b7e6bddb2c838f3209548609254addad4e1/pdf/Digital%20Reasoning%20Thread.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button variant="default" size="sm" className="hidden sm:inline-flex">
+              Read the paper
+            </Button>
+          </a>
           <Button variant="secondary" size="sm">
-            Join the community
+            Join the community (coming soon)
           </Button>
         </div>
       </div>
