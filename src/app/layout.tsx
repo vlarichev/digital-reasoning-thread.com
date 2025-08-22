@@ -13,14 +13,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Digital Reasoning Thread - Modern System Architecture Platform</title>
-        <meta name="description" content="Explore the architecture of modern systems through our comprehensive platform. Learn about system design, scalability, and best practices for building robust applications." />
+        <title>Digital Reasoning Thread – A Reasoning Architecture for Industrial Systems</title>
+        <meta name="description" content="The Digital Reasoning Thread introduces a new architectural layer that connects context, assumptions, logic, and outcomes across tools and processes. It turns reasoning into a traceable, auditable, and reusable asset across the industrial value chain." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Digital Reasoning Thread - Modern System Architecture Platform" />
-        <meta property="og:description" content="Discover modern system architecture principles and practices. Our platform provides in-depth insights into building scalable, resilient, and efficient software systems." />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Digital Reasoning Thread – A Reasoning Architecture for Industrial Systems" />
+        <meta property="og:description" content="The Digital Reasoning Thread introduces a new architectural layer that connects context, assumptions, logic, and outcomes across tools and processes. It turns reasoning into a traceable, auditable, and reusable asset across the industrial value chain." />
         <meta name="image" property="og:image" content="/og.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
