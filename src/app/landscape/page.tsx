@@ -9,6 +9,7 @@ interface LayerCompany {
   name: string;
   funding: string;
   note: string;
+  url?: string;
   isGap?: boolean;
 }
 
@@ -30,10 +31,10 @@ const layers: Layer[] = [
     color: "#1a1a2e",
     accent: "#e94560",
     companies: [
-      { name: "Palantir Foundry", funding: "Public", note: "Full data lineage + AI decision provenance" },
-      { name: "Fero Labs", funding: "$40M", note: "Explainable ML — every prediction comes with a reason" },
-      { name: "Cognite", funding: "$300M+", note: "Data lineage across industrial knowledge graphs" },
-      { name: "Dataiku", funding: "$800M+", note: "Enterprise AI governance & model monitoring" },
+      { name: "Palantir Foundry", funding: "Public", note: "Full data lineage + AI decision provenance", url: "https://www.palantir.com" },
+      { name: "Fero Labs", funding: "$40M", note: "Explainable ML — every prediction comes with a reason", url: "https://www.ferolabs.com" },
+      { name: "Cognite", funding: "$300M+", note: "Data lineage across industrial knowledge graphs", url: "https://www.cognite.com" },
+      { name: "Dataiku", funding: "$800M+", note: "Enterprise AI governance & model monitoring", url: "https://www.dataiku.com" },
     ],
   },
   {
@@ -43,10 +44,10 @@ const layers: Layer[] = [
     color: "#16213e",
     accent: "#f59e0b",
     companies: [
-      { name: "Synera", funding: "$14.8M", note: "AI Agent Platform for Engineering; BMW, Airbus, NASA" },
-      { name: "Waylay", funding: "$10M+", note: "Hybrid AI + rule-based workflow orchestration" },
-      { name: "Tulip", funding: "$100M+", note: "No-code frontline operations platform" },
-      { name: "Machina Labs", funding: "$124M", note: "AI + robotics manufacturing with full part provenance" },
+      { name: "Synera", funding: "$14.8M", note: "AI Agent Platform for Engineering; BMW, Airbus, NASA", url: "https://www.synera.io" },
+      { name: "Waylay", funding: "$10M+", note: "Hybrid AI + rule-based workflow orchestration", url: "https://www.waylay.io" },
+      { name: "Tulip", funding: "$100M+", note: "No-code frontline operations platform", url: "https://tulip.co" },
+      { name: "Machina Labs", funding: "$124M", note: "AI + robotics manufacturing with full part provenance", url: "https://machinalabs.com" },
     ],
   },
   {
@@ -56,10 +57,10 @@ const layers: Layer[] = [
     color: "#0f3460",
     accent: "#10b981",
     companies: [
-      { name: "Flexciton", funding: "$30M", note: "AI production scheduling for semiconductor fabs" },
-      { name: "Oden Technologies", funding: "$30M", note: "Prescriptive insights for process engineers" },
-      { name: "Braincube", funding: "$30M+", note: "Closed-loop process optimization" },
-      { name: "Cosmotech", funding: "$25M", note: "Simulation Digital Twin for scenario-based decisions" },
+      { name: "Flexciton", funding: "$30M", note: "AI production scheduling for semiconductor fabs", url: "https://flexciton.com" },
+      { name: "Oden Technologies", funding: "$30M", note: "Prescriptive insights for process engineers", url: "https://oden.io" },
+      { name: "Braincube", funding: "$30M+", note: "Closed-loop process optimization", url: "https://braincube.com" },
+      { name: "Cosmotech", funding: "$25M", note: "Simulation Digital Twin for scenario-based decisions", url: "https://cosmotech.com" },
     ],
   },
   {
@@ -70,9 +71,9 @@ const layers: Layer[] = [
     accent: "#ff6b6b",
     isWhiteSpace: true,
     companies: [
-      { name: "Palantir AIP", funding: "Public", note: "LLM reasoning over ontological data" },
-      { name: "C3.ai", funding: "Public", note: "Enterprise AI with reliability analytics" },
-      { name: "Monolith AI", funding: "$20M+", note: "Learned physics replaces simulation" },
+      { name: "Palantir AIP", funding: "Public", note: "LLM reasoning over ontological data", url: "https://www.palantir.com" },
+      { name: "C3.ai", funding: "Public", note: "Enterprise AI with reliability analytics", url: "https://c3.ai" },
+      { name: "Monolith AI", funding: "$20M+", note: "Learned physics replaces simulation", url: "https://www.monolithai.com" },
       { name: "??? THE GAP ???", funding: "—", note: "No startup owns industrial reasoning as a first-class primitive", isGap: true },
     ],
   },
@@ -83,10 +84,10 @@ const layers: Layer[] = [
     color: "#0f3460",
     accent: "#8b5cf6",
     companies: [
-      { name: "Fero Labs", funding: "$40M", note: "Explainable ML for process manufacturing" },
-      { name: "Sight Machine", funding: "$80M+", note: "Digital twin of the production process" },
-      { name: "EthonAI", funding: "$16.5M", note: "Automates root-cause analysis for defects" },
-      { name: "Instrumental", funding: "$50M+", note: "AI visual inspection for electronics (acq. by Apple)" },
+      { name: "Fero Labs", funding: "$40M", note: "Explainable ML for process manufacturing", url: "https://www.ferolabs.com" },
+      { name: "Sight Machine", funding: "$80M+", note: "Digital twin of the production process", url: "https://sightmachine.com" },
+      { name: "EthonAI", funding: "$16.5M", note: "Automates root-cause analysis for defects", url: "https://ethon.ai" },
+      { name: "Instrumental", funding: "$50M+", note: "AI visual inspection for electronics (acq. by Apple)", url: "https://instrumental.com" },
     ],
   },
   {
@@ -96,10 +97,10 @@ const layers: Layer[] = [
     color: "#16213e",
     accent: "#06b6d4",
     companies: [
-      { name: "Cognite", funding: "$300M+", note: "Industrial DataOps; knowledge graphs; digital twin backbone" },
-      { name: "Palantir Foundry", funding: "Public", note: "Ontology-based enterprise data integration" },
-      { name: "Arundo Analytics", funding: "$50M", note: "AI for heavy asset industries; knowledge graphs" },
-      { name: "Seeq", funding: "$115M", note: "Advanced analytics for time-series process data" },
+      { name: "Cognite", funding: "$300M+", note: "Industrial DataOps; knowledge graphs; digital twin backbone", url: "https://www.cognite.com" },
+      { name: "Palantir Foundry", funding: "Public", note: "Ontology-based enterprise data integration", url: "https://www.palantir.com" },
+      { name: "Arundo Analytics", funding: "$50M", note: "AI for heavy asset industries; knowledge graphs", url: "https://www.arundo.com" },
+      { name: "Seeq", funding: "$115M", note: "Advanced analytics for time-series process data", url: "https://www.seeq.com" },
     ],
   },
   {
@@ -109,25 +110,43 @@ const layers: Layer[] = [
     color: "#1a1a2e",
     accent: "#3b82f6",
     companies: [
-      { name: "Litmus", funding: "$73M+", note: "Edge data platform; 250+ industrial connectors" },
-      { name: "Augury", funding: "$300M+", note: "IoT sensors + AI; 500M+ hours of machine data" },
-      { name: "TRACTIAN", funding: "$180M+", note: "Industrial Copilot; hardware + AI for asset monitoring" },
-      { name: "Dynamox", funding: "—", note: "Wireless vibration/temp sensors for mining" },
+      { name: "Litmus", funding: "$73M+", note: "Edge data platform; 250+ industrial connectors", url: "https://litmus.io" },
+      { name: "Augury", funding: "$300M+", note: "IoT sensors + AI; 500M+ hours of machine data", url: "https://www.augury.com" },
+      { name: "TRACTIAN", funding: "$180M+", note: "Industrial Copilot; hardware + AI for asset monitoring", url: "https://tractian.com" },
+      { name: "Dynamox", funding: "—", note: "Wireless vibration/temp sensors for mining", url: "https://dynamox.net" },
     ],
   },
 ];
 
-const crossLayerMovers: { name: string; layers: LayerId[]; color: string }[] = [
-  { name: "Palantir", layers: ["L2", "L4", "L7"], color: "#e94560" },
-  { name: "Cognite", layers: ["L2", "L7"], color: "#06b6d4" },
-  { name: "Augury", layers: ["L1", "L3"], color: "#3b82f6" },
-  { name: "Synera", layers: ["L5", "L6"], color: "#f59e0b" },
-  { name: "Fero Labs", layers: ["L3", "L7"], color: "#8b5cf6" },
-  { name: "TRACTIAN", layers: ["L1", "L3", "L5"], color: "#10b981" },
-  { name: "Machina Labs", layers: ["L5", "L6", "L7"], color: "#ff6b6b" },
+const crossLayerMovers: { name: string; layers: LayerId[]; color: string; url?: string }[] = [
+  { name: "Palantir", layers: ["L2", "L4", "L7"], color: "#e94560", url: "https://www.palantir.com" },
+  { name: "Cognite", layers: ["L2", "L7"], color: "#06b6d4", url: "https://www.cognite.com" },
+  { name: "Augury", layers: ["L1", "L3"], color: "#3b82f6", url: "https://www.augury.com" },
+  { name: "Synera", layers: ["L5", "L6"], color: "#f59e0b", url: "https://www.synera.io" },
+  { name: "Fero Labs", layers: ["L3", "L7"], color: "#8b5cf6", url: "https://www.ferolabs.com" },
+  { name: "TRACTIAN", layers: ["L1", "L3", "L5"], color: "#10b981", url: "https://tractian.com" },
+  { name: "Machina Labs", layers: ["L5", "L6", "L7"], color: "#ff6b6b", url: "https://machinalabs.com" },
 ];
 
 type ViewMode = "stack" | "bridges";
+
+// Deduplicated company list for the directory (by URL), with short description
+function getCompaniesDirectory(): { name: string; url: string; note: string }[] {
+  const byUrl = new Map<string, { name: string; note: string }>();
+  for (const layer of layers) {
+    for (const company of layer.companies) {
+      if (company.isGap || !company.url) continue;
+      if (!byUrl.has(company.url)) {
+        byUrl.set(company.url, { name: company.name, note: company.note });
+      }
+    }
+  }
+  return Array.from(byUrl.entries())
+    .map(([url, { name, note }]) => ({ name, url, note }))
+    .sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }));
+}
+
+const companiesDirectory = getCompaniesDirectory();
 
 export default function LandscapePage() {
   const [selectedLayer, setSelectedLayer] = useState<LayerId | null>(null);
@@ -189,6 +208,68 @@ export default function LandscapePage() {
           >
             The Kubernetes of Industrial Reasoning — 7 Layers, 30+ Companies, 1 Missing Thread
           </p>
+
+          {/* Intro: what we do here and why */}
+          <blockquote
+            style={{
+              margin: "1.5rem 0 0 1.5rem",
+              paddingLeft: "1rem",
+              borderLeft: "3px solid #2a2a3e",
+              color: "#9090a0",
+              fontSize: "0.85rem",
+              lineHeight: 1.6,
+            }}
+          >
+            The Digital Reasoning Thread (DRT) isn&apos;t being built by one company. It&apos;s
+            emerging — layer by layer — from dozens of startups that don&apos;t yet know
+            they&apos;re building the same thing. Here we map who they are, where they fit
+            in the 7-layer stack, and what&apos;s still missing: the vertical connective
+            tissue that would run from sensing (L1) through governance (L7).             Use the
+            interactive stack below to explore layers and companies; switch to
+            &ldquo;Cross-Layer Bridges&rdquo; to see who already spans multiple layers.
+          </blockquote>
+
+          {/* 7-layer stack reference */}
+          <p
+            style={{
+              fontSize: "0.7rem",
+              color: "#606080",
+              marginTop: "1.25rem",
+              marginBottom: "0.5rem",
+              paddingLeft: "1.5rem",
+              textTransform: "uppercase",
+              letterSpacing: "0.08em",
+            }}
+          >
+            The 7-layer DRT stack
+          </p>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "auto 1fr auto",
+              gap: "0.25rem 1rem",
+              fontSize: "0.7rem",
+              color: "#808098",
+              paddingLeft: "1.5rem",
+              marginBottom: "1.5rem",
+            }}
+          >
+            {[
+              ["L1", "Sensing & Edge Intelligence", "What is happening right now?"],
+              ["L2", "Industrial Data Fabric", "How does data connect?"],
+              ["L3", "Perception & Anomaly Detection", "What does this mean?"],
+              ["L4", "Reasoning & Inference", "Why is this happening?"],
+              ["L5", "Decision & Optimization", "What should we do about it?"],
+              ["L6", "Workflow Orchestration & Agents", "How do we execute at scale?"],
+              ["L7", "Governance, Lineage & Explainability", "Can we prove why we did it?"],
+            ].map(([id, name, q]) => (
+              <span key={id} style={{ display: "contents" }}>
+                <span style={{ fontWeight: 700, color: "#a0a0b0" }}>{id}</span>
+                <span>{name}</span>
+                <span style={{ fontStyle: "italic", color: "#606080" }}>{q}</span>
+              </span>
+            ))}
+          </div>
 
           {/* View Toggle */}
           <div
@@ -350,15 +431,32 @@ export default function LandscapePage() {
                               gap: "0.25rem",
                             }}
                           >
-                            <span
-                              style={{
-                                fontSize: "0.8rem",
-                                fontWeight: 700,
-                                color: company.isGap ? "#ff6b6b" : "#fff",
-                              }}
-                            >
-                              {company.name}
-                            </span>
+                            {company.url ? (
+                              <a
+                                href={company.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                  fontSize: "0.8rem",
+                                  fontWeight: 700,
+                                  color: company.isGap ? "#ff6b6b" : "#fff",
+                                  textDecoration: "none",
+                                }}
+                                className="hover:underline"
+                              >
+                                {company.name}
+                              </a>
+                            ) : (
+                              <span
+                                style={{
+                                  fontSize: "0.8rem",
+                                  fontWeight: 700,
+                                  color: company.isGap ? "#ff6b6b" : "#fff",
+                                }}
+                              >
+                                {company.name}
+                              </span>
+                            )}
                             {!company.isGap && (
                               <span
                                 style={{
@@ -398,20 +496,40 @@ export default function LandscapePage() {
                     >
                       {layer.companies
                         .filter((company) => !company.isGap)
-                        .map((company) => (
-                          <span
-                            key={company.name}
-                            style={{
-                              fontSize: "0.6rem",
-                              color: "#505070",
-                              background: "rgba(255,255,255,0.03)",
-                              padding: "0.15rem 0.4rem",
-                              borderRadius: 3,
-                            }}
-                          >
-                            {company.name}
-                          </span>
-                        ))}
+                        .map((company) =>
+                          company.url ? (
+                            <a
+                              key={company.name}
+                              href={company.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                fontSize: "0.6rem",
+                                color: "#505070",
+                                background: "rgba(255,255,255,0.03)",
+                                padding: "0.15rem 0.4rem",
+                                borderRadius: 3,
+                                textDecoration: "none",
+                              }}
+                              className="hover:text-[#808098] hover:underline"
+                            >
+                              {company.name}
+                            </a>
+                          ) : (
+                            <span
+                              key={company.name}
+                              style={{
+                                fontSize: "0.6rem",
+                                color: "#505070",
+                                background: "rgba(255,255,255,0.03)",
+                                padding: "0.15rem 0.4rem",
+                                borderRadius: 3,
+                              }}
+                            >
+                              {company.name}
+                            </span>
+                          )
+                        )}
                       {layer.isWhiteSpace && (
                         <span
                           style={{
@@ -499,15 +617,32 @@ export default function LandscapePage() {
                       marginBottom: "0.75rem",
                     }}
                   >
-                    <span
-                      style={{
-                        fontSize: "0.9rem",
-                        fontWeight: 700,
-                        color: "#fff",
-                      }}
-                    >
-                      {mover.name}
-                    </span>
+                    {mover.url ? (
+                      <a
+                        href={mover.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          fontSize: "0.9rem",
+                          fontWeight: 700,
+                          color: "#fff",
+                          textDecoration: "none",
+                        }}
+                        className="hover:underline"
+                      >
+                        {mover.name}
+                      </a>
+                    ) : (
+                      <span
+                        style={{
+                          fontSize: "0.9rem",
+                          fontWeight: 700,
+                          color: "#fff",
+                        }}
+                      >
+                        {mover.name}
+                      </span>
+                    )}
                     <span
                       style={{
                         fontSize: "0.6rem",
@@ -595,6 +730,165 @@ export default function LandscapePage() {
             </div>
           </div>
         )}
+
+        {/* Explanation: the white space & what comes next */}
+        <section
+          style={{
+            marginTop: "3rem",
+            paddingTop: "2rem",
+            borderTop: "1px solid #1e1e30",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "1rem",
+              fontWeight: 700,
+              color: "#e0e0e0",
+              marginBottom: "1rem",
+              letterSpacing: "0.02em",
+            }}
+          >
+            The white space: what&apos;s missing
+          </h2>
+          <p
+            style={{
+              fontSize: "0.8rem",
+              color: "#9090a0",
+              lineHeight: 1.65,
+              marginBottom: "1rem",
+            }}
+          >
+            Two things are missing. <strong style={{ color: "#e0e0e0" }}>First, layer 4 is thin.</strong>{" "}
+            No startup owns &ldquo;industrial reasoning&rdquo; as a first-class capability. Palantir&apos;s
+            AIP touches it from a general-purpose direction; the industrial-specific, physics-aware,
+            safety-constrained reasoning layer is essentially unoccupied.{" "}
+            <strong style={{ color: "#e0e0e0" }}>Second, the vertical thread doesn&apos;t exist.</strong>{" "}
+            Every company in this landscape operates at one or two layers. None provides the persistent,
+            composable, traceable chain of reasoning that connects a sensor signal (L1) through
+            contextualization (L2), perception (L3), reasoning (L4), decision (L5), execution (L6),
+            and governance (L7). That thread is the DRT.
+          </p>
+
+          <h2
+            style={{
+              fontSize: "1rem",
+              fontWeight: 700,
+              color: "#e0e0e0",
+              marginTop: "1.5rem",
+              marginBottom: "1rem",
+              letterSpacing: "0.02em",
+            }}
+          >
+            What comes next
+          </h2>
+          <p
+            style={{
+              fontSize: "0.8rem",
+              color: "#9090a0",
+              lineHeight: 1.65,
+              marginBottom: "0.5rem",
+            }}
+          >
+            The Digital Reasoning Thread is not a product to be built from scratch. It&apos;s an{" "}
+            <strong style={{ color: "#e0e0e0" }}>integration pattern</strong> — an architectural
+            standard that connects what already exists. Next steps: standardize the Thread Context
+            object; build reference implementations (e.g. Cognite L2 → Fero L3/L7 → Synera L6 with
+            full lineage); and engage the ecosystem. The companies on this landscape are natural
+            allies — they&apos;re building pieces of the same puzzle. The DRT gives them a shared
+            language and a shared architecture.
+          </p>
+          <p
+            style={{
+              fontSize: "0.75rem",
+              color: "#606080",
+              lineHeight: 1.6,
+              fontStyle: "italic",
+            }}
+          >
+            This landscape is a living document. If you&apos;re building in this space, we&apos;d love to
+            map you in. Reach out via the links in the footer.
+          </p>
+        </section>
+
+        {/* Companies directory */}
+        <section
+          style={{
+            marginTop: "3rem",
+            paddingTop: "2rem",
+            borderTop: "1px solid #1e1e30",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "1rem",
+              fontWeight: 700,
+              color: "#e0e0e0",
+              marginBottom: "0.5rem",
+              letterSpacing: "0.02em",
+            }}
+          >
+            Companies in this landscape
+          </h2>
+          <p
+            style={{
+              fontSize: "0.75rem",
+              color: "#606080",
+              marginBottom: "1.25rem",
+              lineHeight: 1.5,
+            }}
+          >
+            Startups and companies we mention on this page, with a short note on what they do. Links
+            go to their official sites.
+          </p>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+              gap: "0.75rem",
+            }}
+          >
+            {companiesDirectory.map((company) => (
+              <a
+                key={company.url}
+                href={company.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "block",
+                  padding: "0.875rem 1rem",
+                  background: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  color: "inherit",
+                  transition: "border-color 0.2s, background 0.2s",
+                }}
+                className="hover:border-[#2a2a3e] hover:bg-[rgba(255,255,255,0.05)]"
+              >
+                <span
+                  style={{
+                    fontSize: "0.85rem",
+                    fontWeight: 700,
+                    color: "#fff",
+                    display: "block",
+                    marginBottom: "0.35rem",
+                  }}
+                >
+                  {company.name}
+                </span>
+                <span
+                  style={{
+                    fontSize: "0.7rem",
+                    color: "#808098",
+                    lineHeight: 1.45,
+                  }}
+                >
+                  {company.note}
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );
