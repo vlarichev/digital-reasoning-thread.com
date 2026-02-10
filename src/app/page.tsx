@@ -3,6 +3,7 @@ import { Hero } from '@/components/hero'
 import { InteractiveBackground } from "@/components/interactive-background"
 import { DomainTerms } from "@/components/domain-terms"
 import { MissionStatement } from "@/components/mission-statement"
+import { LandscapeBlock } from "@/components/landscape-block"
 import { FAQ } from "@/components/faq"
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <MissionStatement />
 
         <DomainTerms />
+        <LandscapeBlock />
         <FAQ />
     </main>
   )

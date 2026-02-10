@@ -8,12 +8,12 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
-import { link } from 'fs'
-
 const navItems = [
-  { name: "Overview", href: 'https://vlarichev.github.io/digital-reasoning-thread/' },
-  { name: "Whitepaper", href: "https://vlarichev.github.io/digital-reasoning-thread/whitepaper.html" },
-  { name: "Contribute", href: "https://github.com/vlarichev/digital-reasoning-thread" },
+  { name: "Principles", href: "/principles", internal: true },
+  { name: "Landscape", href: "/landscape", internal: true },
+  { name: "Overview", href: "https://vlarichev.github.io/digital-reasoning-thread/", internal: false },
+  { name: "Whitepaper", href: "https://vlarichev.github.io/digital-reasoning-thread/whitepaper.html", internal: false },
+  { name: "Contribute", href: "https://github.com/vlarichev/digital-reasoning-thread", internal: false },
 ]
 
 export function Navbar() {
@@ -28,12 +28,25 @@ export function Navbar() {
           <NavigationMenuList className="gap-1">
             {navItems.map((item) => (
               <NavigationMenuItem key={item.name}>
-                <NavigationMenuLink
-                  href={item.href}
-                  className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
-                >
-                  {item.name}
-                </NavigationMenuLink>
+                {item.internal ? (
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href={item.href}
+                      className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </NavigationMenuLink>
+                ) : (
+                  <NavigationMenuLink
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
+                  >
+                    {item.name}
+                  </NavigationMenuLink>
+                )}
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
