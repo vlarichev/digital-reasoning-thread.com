@@ -3,7 +3,26 @@
 import { useState } from "react";
 import { Navbar } from "@/components/navbar";
 
-const layers = [
+type LayerId = "L1" | "L2" | "L3" | "L4" | "L5" | "L6" | "L7";
+
+interface LayerCompany {
+  name: string;
+  funding: string;
+  note: string;
+  isGap?: boolean;
+}
+
+interface Layer {
+  id: LayerId;
+  name: string;
+  question: string;
+  color: string;
+  accent: string;
+  companies: LayerCompany[];
+  isWhiteSpace?: boolean;
+}
+
+const layers: Layer[] = [
   {
     id: "L7",
     name: "Governance, Lineage & Explainability",
@@ -96,9 +115,9 @@ const layers = [
       { name: "Dynamox", funding: "—", note: "Wireless vibration/temp sensors for mining" },
     ],
   },
-] as const;
+];
 
-const crossLayerMovers = [
+const crossLayerMovers: { name: string; layers: LayerId[]; color: string }[] = [
   { name: "Palantir", layers: ["L2", "L4", "L7"], color: "#e94560" },
   { name: "Cognite", layers: ["L2", "L7"], color: "#06b6d4" },
   { name: "Augury", layers: ["L1", "L3"], color: "#3b82f6" },
@@ -106,9 +125,8 @@ const crossLayerMovers = [
   { name: "Fero Labs", layers: ["L3", "L7"], color: "#8b5cf6" },
   { name: "TRACTIAN", layers: ["L1", "L3", "L5"], color: "#10b981" },
   { name: "Machina Labs", layers: ["L5", "L6", "L7"], color: "#ff6b6b" },
-] as const;
+];
 
-type LayerId = (typeof layers)[number]["id"];
 type ViewMode = "stack" | "bridges";
 
 export default function LandscapePage() {
